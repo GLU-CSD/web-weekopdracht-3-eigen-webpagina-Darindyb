@@ -3,13 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My project title</title>
-    <link rel="shortcut icon" type="image/png" href="/assets/favicon.png">
-    <link rel="stylesheet" href="style.css">
-    <!-- <script src="CDN library url"></script> -->
-    <script defer src="main.js"></script>
+    <title>Types of Hello Kitty</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffe4e1;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #ff69b4;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            background-color: #ffc0cb;
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1.2rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 2rem;
+            animation: slideIn 1s ease-out;
+        }
+
+        .card img {
+            width: 100%;
+            display: block;
+        }
+
+        .card h2 {
+            margin: 0;
+            padding: 1rem;
+            background-color: #ff69b4;
+            color: white;
+        }
+
+        .card p {
+            padding: 1rem;
+        }
+
+        footer {
+            background-color: #ff69b4;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .kitty {
+            position: fixed;
+            bottom: 1px;
+            left: 0;
+            width: 100px;
+            animation: moveKitty 5s linear infinite;
+        }
+
+        @keyframes moveKitty {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(calc(100vw - 100px)); }
+            100% { transform: translateX(0); }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello world!</h1>
+    <header>
+        <h1>Discover Hello Kitty</h1>
+    </header>
+    <nav>
+        <a href="#friends">Friends</a>
+        <a href="#holiday">Holiday</a>
+        <a href="#History Hello Kitty">History Hello Kitty</a>
+    </nav>
+    <main>
+        <section id="Friends" class="card">
+            <img src="https://m.media-amazon.com/images/I/71VEprNzzsL._AC_SL1500_.jpg" alt="Classic Hello Kitty">
+            <h2>Friends</h2>
+            <p>At the heart of this magical realm is the iconic Hello Kitty, surrounded by a cast of equally charming friends including Kuromi, Pochacco, Cinnamoroll, Little Twin Stars, Gudetama, Tuxedo Sam, and more.</p>
+        </section>
+        <section id="holiday" class="card">
+            <img src="https://m.media-amazon.com/images/I/81PqXl1xANL._SL1500_.jpg" alt="Holiday Hello Kitty">
+            <h2>Holiday Hello Kitty</h2>
+            <p>Celebrate the seasons with festive Hello Kitty designs, from Christmas outfits to Halloween costumes!</p>
+        </section>
+        <section id="special" class="card">
+            <img src="https://i.pinimg.com/736x/bd/16/5f/bd165fb82793175b6483574dce784bbd.jpg" alt="Special Edition Hello Kitty">
+            <h2>history Hello Kitty </h2>
+            <p>Hello Kitty was created in 1974 and the first item, a vinyl coin purse, was introduced in 1975. Originally, Hello Kitty was only marketed towards pre-teenage girls, but beginning in the 1990s, the brand found commercial success among teenage and adult consumers as well.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Hello Kitty Fansite. All rights reserved.</p>
+    </footer>
+    <img src="https://i.pinimg.com/736x/c3/96/37/c39637bfd95db94dc50c6645996b0587.jpg" alt="Moving Hello Kitty" class="kitty">
 </body>
 </html>
