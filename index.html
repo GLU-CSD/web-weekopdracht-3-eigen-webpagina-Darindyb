@@ -96,16 +96,25 @@
         }
         .kitty {
             position: fixed;
-            bottom: 1px;
+            bottom: 0px;
             left: 0;
             width: 100px;
             animation: moveKitty 5s linear infinite;
         }
 
         @keyframes moveKitty {
-            0% { transform: translateX(0); }
-            50% { transform: translateX(calc(100vw - 100px)); }
-            100% { transform: translateX(0); }
+            0% {
+                transform: translateX(0) scaleX(1);
+            }
+            50% {
+                transform: translateX(calc(100vw - 100px)) scaleX(-1);
+            }
+            55% {
+                transform: translateX(calc(100vw - 150px)) scaleX(-1);
+            }
+            100% {
+                transform: translateX(0) scaleX(0);
+            }
         }
     </style>
 </head>
